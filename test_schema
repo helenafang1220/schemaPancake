@@ -1,0 +1,39 @@
+[
+  {
+    "eventKey": "page_view",
+    "eventField": "event",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "event": { "const": "page_view" },
+        "page": {
+          "type": "object",
+          "properties": {
+            "url": { "type": "string", "format": "uri" },
+            "title": { "type": "string" }
+          },
+          "required": ["url"],
+          "additionalProperties": true
+        }
+      },
+      "required": ["event", "page"],
+      "additionalProperties": true
+    }
+  },
+  {
+    "eventKey": "add_to_cart",
+    "eventField": "event",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "event": { "const": "add_to_cart" },
+        "product_id": { "type": "string", "minLength": 1 },
+        "quantity": { "type": "integer", "minimum": 1 }
+      },
+      "required": ["event", "product_id"],
+      "additionalProperties": true
+    }
+  }
+]
