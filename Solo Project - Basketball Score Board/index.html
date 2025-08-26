@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Mynerve&family=Orbitron:wght@400..900&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="scoreCard">
+            <div>
+                <h3>HOME</h3>
+                <div class = "scoreFrame">
+                    <div id = "homeScore"></div>
+                </div>
+                <button id = "score1btn" onclick = "score1h()">+1</button>
+                <button id = "score2btn" onclick = "score2h()">+2</button>
+                <button id = "score3btn" onclick = "score3h()">+3</button>
+            </div>
+            <div>
+                <h3>GUEST</h3>
+                <div class = "scoreFrame">
+                    <div id = "guestScore"></div>
+                </div>
+                <button id = "score1btn" onclick = "score1g()">+1</button>
+                <button id = "score2btn" onclick = "score2g()">+2</button>
+                <button id = "score3btn" onclick = "score3g()">+3</button>
+            </div>
+        </div>
+        <div class="container">
+        <div>
+                <button id = "resetbtn" onclick = "reset()">RESET</button>
+            </div>
+        <script src="index.js"></script>
+    </body>
+</html>
